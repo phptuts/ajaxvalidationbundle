@@ -1,0 +1,16 @@
+{
+    "name": "noahglaser/ajaxvalidationbundle",
+    "description": "It provides a service and url for ajax validation that will valdiate all symfony forms without options.",
+    "require-dev": {
+        "phpunit/phpunit": "4.3.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noah Glaser",
+            "email": "noah.php@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
