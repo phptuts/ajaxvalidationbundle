@@ -12,5 +12,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+   "autoload": {
+        "psr-0": { "NoahGlaser\\AjaxValidationBundle": "" }
+    },
+    "target-dir": "NoahGlaser/AjaxValidationBundle"
 }
