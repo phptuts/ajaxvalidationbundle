@@ -1,5 +1,5 @@
 {
-    "name": "noahglaser/ajaxvalidationbundle",
+    "name": "noahglaser/validationbundle",
     "description": "It provides a service and url for ajax validation that will valdiate all symfony forms without options.",
     "require-dev": {
         "phpunit/phpunit": "4.3.*"
@@ -14,7 +14,7 @@
     "minimum-stability": "dev",
     "require": {},
    "autoload": {
-        "psr-0": { "NoahGlaser\\AjaxValidationBundle": "" }
+        "psr-0": { "NoahGlaser\\ValidationBundle": "" }
     },
-    "target-dir": "NoahGlaser/AjaxValidationBundle"
+    "target-dir": "NoahGlaser/ValidationBundle"
 }
