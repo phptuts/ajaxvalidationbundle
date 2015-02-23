@@ -1,0 +1,3 @@
+ajax_validation:
+    path: ajaxvalidation_
+    defaults: { _controller:NoahGlaserValidationBundle:Ajax:validate }
