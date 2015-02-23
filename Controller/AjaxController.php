@@ -29,6 +29,10 @@ class AjaxController extends Controller
       else
       {
            $errors =  $this->get('noahglaser.validation.formservices.getformerrors')->getAllFormErrors($form);
+           $ret = [];
+           $ret['errors'] = $errors;
+           $ret['hasError'] = true;
+           $ret['success'] = true;
            return new JsonResponse($errors);
       }
 
