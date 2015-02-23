@@ -33,7 +33,7 @@ class AjaxController extends Controller
            $ret['errors'] = $errors;
            $ret['hasError'] = true;
            $ret['success'] = true;
-           return new JsonResponse($errors);
+           return new JsonResponse($ret);
       }
 
     }
