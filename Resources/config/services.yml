@@ -1,4 +1,4 @@
 services:
     noahglaser.validation.formservices.getformerrors:
          class: NoahGlaser\ValidationBundle\FormServices\GetFormErrors
-         arguments: [@translator.default]
+         arguments: ['@translator.default']
