@@ -8,16 +8,19 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AjaxController extends Controller
 {
-    public function validateAction(Request $request)
+    /**
+     * @param Request $request
+     * @param $serviceName
+     * @return JsonResponse
+     */
+    public function validateAction(Request $request, $serviceName)
     {
-      $postdata = $request->request->all();
-      $formname = key($postdata);
-      $form = $this->createForm($formname); 
+      $form = $this->createForm($serviceName); 
       if($request->query->has('id'))
       {
           $classname = $form->getConfig()->getDataClass();
           $entity  = $this->getDoctrine()->getManager()->getRepository($classname)->findOneBy(array('id' => $request->query->get('id')));
-          $form = $this->createForm($formname, $entity); 
+          $form = $this->createForm($serviceName, $entity); 
       }
       
       $form->handleRequest($request);
