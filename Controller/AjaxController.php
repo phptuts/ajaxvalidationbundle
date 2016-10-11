@@ -15,7 +15,7 @@ class AjaxController extends Controller
      */
     public function validateAction(Request $request, $serviceName)
     {
-      $form = $this->createForm($this->get($serviceName));
+      $formClassName = get_class($this->get($serviceName));
       if($request->query->has('id'))
       {
           $classname = $form->getConfig()->getDataClass();
