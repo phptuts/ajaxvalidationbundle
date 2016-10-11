@@ -16,11 +16,13 @@ class AjaxController extends Controller
     public function validateAction(Request $request, $serviceName)
     {
       $formClassName = get_class($this->get($serviceName));
+      $form = $this->createForm($formClassName);
+        
       if($request->query->has('id'))
       {
           $classname = $form->getConfig()->getDataClass();
           $entity  = $this->getDoctrine()->getManager()->getRepository($classname)->findOneBy(array('id' => $request->query->get('id')));
-          $form = $this->createForm($serviceName, $entity); 
+          $form = $this->createForm($formClassName, $entity); 
       }
       
       $form->handleRequest($request);
